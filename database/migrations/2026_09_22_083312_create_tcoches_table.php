@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('tcoches', function (Blueprint $table) {
            // $table->id();
             //$table->timestamps();
-            $table->string('bastidor', 17)->primarykey();
+            $table->string('matricula', 17)->primarykey();
             $table->string('marca', 50);
-            $table->integer('anys')->unsigned();
+            $table->string('modelo');
+            $table->integer('anyo')->unsigned();
              });
     }
 

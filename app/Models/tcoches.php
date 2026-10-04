@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class tcoches extends Model
 {
     public $timestamps = false;
-    protected $primaryKey = 'bastidor';
+    protected $primaryKey = 'matricula';
     protected $keyType = 'string';    
 }
 
