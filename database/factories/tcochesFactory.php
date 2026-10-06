@@ -38,12 +38,14 @@ class tcochesFactory extends Factory
             'Ford'       => ['Focus', 'Fiesta', 'Kuga', 'Puma'],
         ];
 
-
-        $marca = fake()->random
-
-
+        $marca = fake()->randomElement(array_keys($marcasYModelos));
+        $modelo = fake()->randomElement($marcasYModelos[$marca]);
+        
         return [
-            //
+        'matricula' => fake()->unique()->passthrough($matricula),
+        'marca' => $marca,
+        'modelo' => $modelo,
+        'anyo' => fake()->numberBetween(2000, 2026),    
         ];
     }
 }

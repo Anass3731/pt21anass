@@ -13,9 +13,9 @@ class tcochesSeeder extends Seeder
      */
     public function run(): void
     {
-        tcoches::trucate(); //borra todos los datos de la tabla (PARA NO REPETIR)
+        tcoches::truncate(); //borra todos los datos de la tabla (PARA NO REPETIR)
     
-        tcoche::factory(50)->create();
+        tcoches::factory(50)->create();
         }
     }
-}
+
