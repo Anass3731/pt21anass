@@ -43,9 +43,10 @@ class tcochesFactory extends Factory
         
         return [
         'matricula' => fake()->unique()->passthrough($matricula),
-        'marca' => $marca,
-        'modelo' => $modelo,
-        'anyo' => fake()->numberBetween(2000, 2026),    
+        'marca'     => $marca,
+        'modelo'    => $modelo,
+        'anyo'      => fake()->numberBetween(2000, 2026),
+        'color'     => fake()->safeColorName(),    
         ];
     }
 }

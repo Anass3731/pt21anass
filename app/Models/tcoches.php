@@ -14,6 +14,6 @@ class tcoches extends Model
     protected $keyType = 'string';    
     public $incrementing = false;
 
-    protected $fillable = ['matricula', 'marca', 'modelo', 'anyo'];
+    protected $fillable = ['matricula', 'marca', 'modelo', 'anyo', 'color'];
 }
 
