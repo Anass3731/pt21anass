@@ -4,7 +4,6 @@
 
 @section('contingut')
 
-<p>Hola soy consultar detalle</p>
 <div class="container my-4">
 <p>Mostrar resultado. Resultado: {{ count($dades) }}</p>
 <div class="card shadow-sm p-4">
@@ -17,9 +16,9 @@
     <li><strong>Marca->  </strong>{{ $dades[0]->marca }}</li>
     <li><strong>Modelo->  </strong>{{ $dades[0]->modelo }}</li>
     <li><strong>Año->  </strong>{{ $dades[0]->anyo }}</li>
+    <li><strong>Color->  </strong>{{ $dades[0]->color }}</li>
 </ul>
 </div>
-
 
 <div class="col-md-5 text-center mt-3 mt-md-0">
 <img src="{{ asset('img/' . strtolower($dades[0]->marca) . '.jpg') }}"

@@ -3,22 +3,25 @@
 @section('titulo', 'Insertar Coche')
 
 @section('contingut')
+<style>
+    body {
+        background: url("{{ asset('img/inserir.jpg') }}") no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+
 <div class="row justify-content-center">
     <div class="col-md-8">
+        <div class="card shadow-lg p-4 bg-white bg-opacity-95 rounded">
         <h2 class="mb-4 text-center">Añadir coche a la venta</h2>
         
-        
-
-        <!-- FORMULARIO DE ENVÍO -->
         <form action="{{ route('datos_insertar') }}" method="POST">
-            <!-- TOKEN DE SEGURIDAD OBLIGATORIO DE LARAVEL -->
+           
             @csrf
             @if (session('success'))
             <h6 class="alert alert-success">{{ session('success') }}</h6>
             @endif
-
-            
-            <!-- Campo 1: Matrícula -->
+         
             <div class="mb-3">
                 <label for="matricula" class="form-label">Matrícula</label>
                 <input type="text" class="form-control" name="matricula" id="matricula" aria-describedby="helpId" placeholder="0000MMM" value="{{ old('matricula') }}">
@@ -28,7 +31,6 @@
             @enderror
             </div>
 
-            <!-- Campo 2: Marca -->
             <div class="mb-3">
                 <label for="marca" class="form-label">Marca del coche</label>
                 <input type="text" class="form-control" name="marca" id="marca" placeholder="Audi, SEAT, Volkswagen... " value="{{ old('marca') }}">
@@ -37,7 +39,7 @@
                 @enderror
             </div>
 
-            <!-- Campo 3: Modelo -->
+            
             <div class="mb-3">
                 <label for="modelo" class="form-label">Modelo del coche</label>
                 <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Escribe el modelo" value="{{ old('modelo') }}">
@@ -46,7 +48,7 @@
                 @enderror
             </div>
 
-            <!-- Campo 4: Año -->
+
             <div class="mb-3">
                 <label for="anyo" class="form-label">Año del coche</label>
                 <input type="number" class="form-control" name="anyo" id="anyo" placeholder="¿De qué año es?" value="{{ old('anyo') }}">
@@ -55,7 +57,14 @@
                 @enderror
             </div>
 
-            <!-- BOTÓN PARA ENVIAR EL FORMULARIO -->
+            <div class="mb-3">
+                <label for="color" class="form-label">¿De qué color es?</label>
+                <input type="text" class="form-control" name="color" id="color" placeholder="Rojo, Negro, Blanco..." value="{{ old('color') }}">
+                @error('color')
+                    <h6 class="alert alert-danger mt-1 p-1">{{ $message }}</h6>
+                @enderror
+            </div>
+           
             <button type="submit" class="btn btn-primary w-100">Guardar Coche</button>
         </form>
 

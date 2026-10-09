@@ -16,4 +16,3 @@ class tcoches extends Model
 
     protected $fillable = ['matricula', 'marca', 'modelo', 'anyo', 'color'];
 }
-

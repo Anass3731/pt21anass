@@ -18,4 +18,3 @@ class tcochesSeeder extends Seeder
         tcoches::factory(50)->create();
         }
     }
-

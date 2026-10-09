@@ -7,7 +7,7 @@ use App\Http\Controllers\elmeucontrolador;
 Route::get('/', function () {    return view('index');});
 
 // Rutas informativas
-Route::get('/nosaltres', function () { return view('nosaltres'); });
+Route::get('/nosotros', function () { return view('nosotros'); });
 
 Route::get('/dondeestamos', function () { return view('dondeestamos'); });
 
@@ -32,4 +32,3 @@ Route::delete('/borrar/{fila}',[elmeucontrolador::class, 'f_borrarfila'])->name(
 Route::get('/modificar', [elmeucontrolador::class, 'f_modificar'])->name('datos_modificar');
 Route::get('/modificar/{fila}',[elmeucontrolador::class, 'f_modificarfila'])->name('datos_modificarfila');
 Route::patch('/modificar/{fila}',[elmeucontrolador::class, 'f_actualimodificarfila'])->name('datos_actualimodificarfila');
-

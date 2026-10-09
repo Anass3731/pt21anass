@@ -7,7 +7,7 @@
     <div class="container-fluid py-3">
         <h1 class="display-5 fw-bold">Compra venta de coches</h1>
         <p class="col-md-8 fs-4">Pagina web para comprar y vender coches</p>
-       <img src="{{ asset('img/coche1.jpg') }}" alt="Coche de prueba" class="img-fluid">
+    <img src="{{ asset('img/coche1.jpg') }}" alt="Coche de prueba" class="img-fluid">
     </div>
 </div>
 @endsection

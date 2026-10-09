@@ -3,14 +3,11 @@
 @section('titulo', 'Buscar Coche')
 
 @section('contingut')
-
-<p>Hola soy buscar </p>
-
 <div class="mx-auto" style="width: 500px;">
 <form action="{{ url('/buscar') }}" method="POST" class="col-md-6 mt-3">    
 @csrf      
-      
-      
+     
+     
 
    <div class="mb-3">
             <label for="algo" class="form-label">BUSCAR</label>
@@ -29,8 +26,5 @@
     <button type="submit" class="btn btn-primary">Buscar</button>
   </form>
 </div>
-
-
-
 
 @endsection

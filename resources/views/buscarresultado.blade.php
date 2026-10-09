@@ -3,7 +3,6 @@
 @section('titulo', 'Resultado de la busqueda')
 
 @section('contingut')
-<p>Soy el resultado</p>
 <div class="mx-auto" style="width: 600px;">
     @if (count($dades) == 0)
     <div class="alert alert-danger mt-3" role="alert">
